@@ -99,125 +99,124 @@
 43-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:26:5-37
 44        android:roundIcon="@mipmap/ic_launcher_round"
 44-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:28:5-50
-45        android:testOnly="true"
-46        android:theme="@style/AppTheme"
-46-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:30:5-36
-47        android:usesCleartextTraffic="true" >
-47-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/debug/AndroidManifest.xml:6:18-53
-48        <meta-data
-48-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:32:5-103
-49            android:name="expo.modules.updates.EXPO_UPDATE_URL"
-49-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:32:16-67
-50            android:value="YOUR-APP-URL-HERE" />
-50-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:32:68-101
-51        <meta-data
-51-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:33:5-112
-52            android:name="expo.modules.updates.EXPO_SDK_VERSION"
-52-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:33:16-68
-53            android:value="YOUR-APP-SDK-VERSION-HERE" />
-53-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:33:69-110
-54
-55        <activity
-55-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:34:5-46:16
-56            android:name="com.sley.MainActivity"
-56-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:35:7-35
-57            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-57-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:37:7-84
-58            android:label="@string/app_name"
-58-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:36:7-39
-59            android:launchMode="singleTask"
-59-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:38:7-38
-60            android:theme="@style/Theme.App.SplashScreen"
-60-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:40:7-52
-61            android:windowSoftInputMode="adjustResize" >
-61-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:39:7-49
-62            <intent-filter>
-62-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:42:7-45:23
-63                <action android:name="android.intent.action.MAIN" />
-63-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:43:9-60
-63-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:43:17-58
-64
-65                <category android:name="android.intent.category.LAUNCHER" />
-65-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:44:9-68
-65-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:44:19-66
-66            </intent-filter>
-67        </activity>
-68        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-68-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:47:5-81
-68-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:47:15-79
-69
-70        <meta-data
-70-->[:unimodules-react-native-adapter] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:91
-71            android:name="org.unimodules.core.AppLoader#react-native-headless"
-71-->[:unimodules-react-native-adapter] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
-72            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
-72-->[:unimodules-react-native-adapter] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-88
-73
-74        <provider
-74-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-26:20
-75            android:name="expo.modules.filesystem.FileSystemFileProvider"
-75-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-74
-76            android:authorities="com.sley.FileSystemFileProvider"
-76-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
-77            android:exported="false"
-77-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-37
-78            android:grantUriPermissions="true" >
-78-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-47
-79            <meta-data
-79-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-25:70
-80                android:name="android.support.FILE_PROVIDER_PATHS"
-80-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:17-67
-81                android:resource="@xml/file_system_provider_paths" />
-81-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
-82        </provider>
-83
-84        <service
-84-->[:expo-location] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
-85            android:name="expo.modules.location.services.LocationTaskService"
-85-->[:expo-location] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
-86            android:exported="false" />
-86-->[:expo-location] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
-87
-88        <activity
-88-->[com.google.android.gms:play-services-base:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/0b1fa0ffbb26579056b854b859971fa2/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
-89            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-89-->[com.google.android.gms:play-services-base:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/0b1fa0ffbb26579056b854b859971fa2/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
-90            android:exported="false"
-90-->[com.google.android.gms:play-services-base:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/0b1fa0ffbb26579056b854b859971fa2/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
-91            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-91-->[com.google.android.gms:play-services-base:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/0b1fa0ffbb26579056b854b859971fa2/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
-92
-93        <meta-data
-93-->[com.google.android.gms:play-services-basement:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/279680bea6706886fc2e3cf964817795/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
-94            android:name="com.google.android.gms.version"
-94-->[com.google.android.gms:play-services-basement:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/279680bea6706886fc2e3cf964817795/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
-95            android:value="@integer/google_play_services_version" />
-95-->[com.google.android.gms:play-services-basement:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/279680bea6706886fc2e3cf964817795/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
-96
-97        <service
-97-->[androidx.room:room-runtime:2.1.0] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
-98            android:name="androidx.room.MultiInstanceInvalidationService"
-98-->[androidx.room:room-runtime:2.1.0] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
-99            android:exported="false" />
-99-->[androidx.room:room-runtime:2.1.0] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
-100        <service
-100-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
-101            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
-101-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
-102            android:exported="false" />
-102-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
-103        <service
-103-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
-104            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
-104-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
-105            android:exported="false" />
-105-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
-106        <service
-106-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
-107            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
-107-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
-108            android:exported="false" />
-108-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
-109    </application>
-110
-111</manifest>
+45        android:theme="@style/AppTheme"
+45-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:30:5-36
+46        android:usesCleartextTraffic="true" >
+46-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/debug/AndroidManifest.xml:6:18-53
+47        <meta-data
+47-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:32:5-103
+48            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+48-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:32:16-67
+49            android:value="YOUR-APP-URL-HERE" />
+49-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:32:68-101
+50        <meta-data
+50-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:33:5-112
+51            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+51-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:33:16-68
+52            android:value="YOUR-APP-SDK-VERSION-HERE" />
+52-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:33:69-110
+53
+54        <activity
+54-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:34:5-46:16
+55            android:name="com.sley.MainActivity"
+55-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:35:7-35
+56            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+56-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:37:7-84
+57            android:label="@string/app_name"
+57-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:36:7-39
+58            android:launchMode="singleTask"
+58-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:38:7-38
+59            android:theme="@style/Theme.App.SplashScreen"
+59-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:40:7-52
+60            android:windowSoftInputMode="adjustResize" >
+60-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:39:7-49
+61            <intent-filter>
+61-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:42:7-45:23
+62                <action android:name="android.intent.action.MAIN" />
+62-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:43:9-60
+62-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:43:17-58
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:44:9-68
+64-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:44:19-66
+65            </intent-filter>
+66        </activity>
+67        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+67-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:47:5-81
+67-->/Users/LeRID/Documents/MesProjets/SLEY/android/app/src/main/AndroidManifest.xml:47:15-79
+68
+69        <meta-data
+69-->[:unimodules-react-native-adapter] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-14:91
+70            android:name="org.unimodules.core.AppLoader#react-native-headless"
+70-->[:unimodules-react-native-adapter] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-79
+71            android:value="org.unimodules.adapters.react.apploader.RNHeadlessAppLoader" />
+71-->[:unimodules-react-native-adapter] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-88
+72
+73        <provider
+73-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-26:20
+74            android:name="expo.modules.filesystem.FileSystemFileProvider"
+74-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-74
+75            android:authorities="com.sley.FileSystemFileProvider"
+75-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
+76            android:exported="false"
+76-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-37
+77            android:grantUriPermissions="true" >
+77-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-47
+78            <meta-data
+78-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-25:70
+79                android:name="android.support.FILE_PROVIDER_PATHS"
+79-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:24:17-67
+80                android:resource="@xml/file_system_provider_paths" />
+80-->[:expo-file-system] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:25:17-67
+81        </provider>
+82
+83        <service
+83-->[:expo-location] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+84            android:name="expo.modules.location.services.LocationTaskService"
+84-->[:expo-location] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+85            android:exported="false" />
+85-->[:expo-location] /Users/LeRID/Documents/MesProjets/SLEY/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+86
+87        <activity
+87-->[com.google.android.gms:play-services-base:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/0b1fa0ffbb26579056b854b859971fa2/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+88-->[com.google.android.gms:play-services-base:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/0b1fa0ffbb26579056b854b859971fa2/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+89            android:exported="false"
+89-->[com.google.android.gms:play-services-base:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/0b1fa0ffbb26579056b854b859971fa2/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[com.google.android.gms:play-services-base:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/0b1fa0ffbb26579056b854b859971fa2/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+91
+92        <meta-data
+92-->[com.google.android.gms:play-services-basement:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/279680bea6706886fc2e3cf964817795/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+93            android:name="com.google.android.gms.version"
+93-->[com.google.android.gms:play-services-basement:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/279680bea6706886fc2e3cf964817795/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58
+94            android:value="@integer/google_play_services_version" />
+94-->[com.google.android.gms:play-services-basement:16.0.1] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/279680bea6706886fc2e3cf964817795/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+95
+96        <service
+96-->[androidx.room:room-runtime:2.1.0] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:25:9-27:40
+97            android:name="androidx.room.MultiInstanceInvalidationService"
+97-->[androidx.room:room-runtime:2.1.0] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:26:13-74
+98            android:exported="false" />
+98-->[androidx.room:room-runtime:2.1.0] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/1f9600edb87ec7249ed2f749439da712/room-runtime-2.1.0/AndroidManifest.xml:27:13-37
+99        <service
+99-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:19:9-21:40
+100            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+100-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:20:13-132
+101            android:exported="false" />
+101-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:21:13-37
+102        <service
+102-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:22:9-24:40
+103            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+103-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:23:13-127
+104            android:exported="false" />
+104-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:24:13-37
+105        <service
+105-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:25:9-27:40
+106            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+106-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:26:13-120
+107            android:exported="false" />
+107-->[io.nlopez.smartlocation:library:3.2.11] /Users/LeRID/.gradle/caches/transforms-2/files-2.1/97edf3e526be4a503f1f7ec38e6d9102/jetified-library-3.2.11/AndroidManifest.xml:27:13-37
+108    </application>
+109
+110</manifest>
