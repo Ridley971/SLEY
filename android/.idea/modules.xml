@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SLEY.iml" filepath="$PROJECT_DIR$/.idea/modules/SLEY.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SLEY.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SLEY.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1655922739/SLEY.expo-application.iml" filepath="$PROJECT_DIR$/.idea/modules/1655922739/SLEY.expo-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1133411854/SLEY.expo-constants.iml" filepath="$PROJECT_DIR$/.idea/modules/-1133411854/SLEY.expo-constants.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-614332233/SLEY.expo-error-recovery.iml" filepath="$PROJECT_DIR$/.idea/modules/-614332233/SLEY.expo-error-recovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1125977731/SLEY.expo-file-system.iml" filepath="$PROJECT_DIR$/.idea/modules/1125977731/SLEY.expo-file-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/887596684/SLEY.expo-font.iml" filepath="$PROJECT_DIR$/.idea/modules/887596684/SLEY.expo-font.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-337159166/SLEY.expo-image-loader.iml" filepath="$PROJECT_DIR$/.idea/modules/-337159166/SLEY.expo-image-loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/578778042/SLEY.expo-keep-awake.iml" filepath="$PROJECT_DIR$/.idea/modules/578778042/SLEY.expo-keep-awake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/952434235/SLEY.expo-linear-gradient.iml" filepath="$PROJECT_DIR$/.idea/modules/952434235/SLEY.expo-linear-gradient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-491242126/SLEY.expo-location.iml" filepath="$PROJECT_DIR$/.idea/modules/-491242126/SLEY.expo-location.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2099895143/SLEY.expo-permissions.iml" filepath="$PROJECT_DIR$/.idea/modules/2099895143/SLEY.expo-permissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1770544056/SLEY.expo-secure-store.iml" filepath="$PROJECT_DIR$/.idea/modules/-1770544056/SLEY.expo-secure-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1168437941/SLEY.expo-splash-screen.iml" filepath="$PROJECT_DIR$/.idea/modules/1168437941/SLEY.expo-splash-screen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1811999241/SLEY.expo-sqlite.iml" filepath="$PROJECT_DIR$/.idea/modules/1811999241/SLEY.expo-sqlite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1390519507/SLEY.expo-updates.iml" filepath="$PROJECT_DIR$/.idea/modules/-1390519507/SLEY.expo-updates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1285345956/SLEY.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-1285345956/SLEY.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/892962624/SLEY.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/892962624/SLEY.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1789296355/SLEY.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-1789296355/SLEY.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-27977353/SLEY.unimodules-app-loader.iml" filepath="$PROJECT_DIR$/.idea/modules/-27977353/SLEY.unimodules-app-loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1456990299/SLEY.unimodules-barcode-scanner-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1456990299/SLEY.unimodules-barcode-scanner-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2120213705/SLEY.unimodules-camera-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/2120213705/SLEY.unimodules-camera-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-374998589/SLEY.unimodules-constants-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-374998589/SLEY.unimodules-constants-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/90288661/SLEY.unimodules-core.iml" filepath="$PROJECT_DIR$/.idea/modules/90288661/SLEY.unimodules-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1480808982/SLEY.unimodules-face-detector-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1480808982/SLEY.unimodules-face-detector-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1126322220/SLEY.unimodules-file-system-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1126322220/SLEY.unimodules-file-system-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2140500621/SLEY.unimodules-font-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-2140500621/SLEY.unimodules-font-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1835926423/SLEY.unimodules-image-loader-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1835926423/SLEY.unimodules-image-loader-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1307922504/SLEY.unimodules-permissions-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/-1307922504/SLEY.unimodules-permissions-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-72145891/SLEY.unimodules-react-native-adapter.iml" filepath="$PROJECT_DIR$/.idea/modules/-72145891/SLEY.unimodules-react-native-adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/447717357/SLEY.unimodules-sensors-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/447717357/SLEY.unimodules-sensors-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/709272329/SLEY.unimodules-task-manager-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/709272329/SLEY.unimodules-task-manager-interface.iml" />
+    </modules>
+  </component>
+</project>
