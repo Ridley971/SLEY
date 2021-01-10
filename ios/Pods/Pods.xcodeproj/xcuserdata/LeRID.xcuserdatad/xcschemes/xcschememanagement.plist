@@ -94,7 +94,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Permission-Calendars.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Permission-Camera.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Permission-Microphone.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Permission-Notifications.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Permission-PhotoLibrary.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

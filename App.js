@@ -9,17 +9,19 @@ import { NavigationContainer } from '@react-navigation/native';
 export default class App extends Component {
 
   componentDidMount(){
-    Permissions.checkPermission(PERMISSIONS_TYPE.microphone)
+    Permissions.checkPermission(PERMISSIONS_TYPE.photo)
   }
 
-  render(){
-    return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app RIDLEY bg!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}}
+  render()
+  {
+      return (
+        <View style={styles.container}>
+          <Text>Open up App.js to start working on your app RIDLEY bg!</Text>
+          <StatusBar style="auto" />
+        </View>
+      );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {

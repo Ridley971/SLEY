@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-permissions
+import com.zoontek.rnpermissions.RNPermissionsPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-screens
@@ -63,6 +65,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new RNGestureHandlerPackage(),
+      new RNPermissionsPackage(),
       new ReanimatedPackage(),
       new RNScreensPackage()
     ));
