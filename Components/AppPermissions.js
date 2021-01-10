@@ -1,4 +1,4 @@
-import {check, request, PERMISSIONS, RESULTS} from 'react-native-permissions';
+import {check, request, PERMISSIONS, RESULTS,checkNotifications, requestNotifications} from 'react-native-permissions';
 import {Platform} from 'react-native'
 
 const PLATFORM_MICROPHONE_PERMISSIONS={
@@ -64,6 +64,37 @@ class AppPermissions {
             console.log("AppPermissions requestPermission error :", error)
             return false
         }
+    }
+
+    requestMutiple =async (types): Promise<boolean> =>{
+        console.log("AppPermissions requestMutiple types :", types)
+        const results = []
+        for (const type of type) {
+            const permission = REQUEST_PERMISSION_TYPE[type][Platform.OS];
+
+            if (permisson) {
+                const result = await this.requestPermission(permission)
+                results.push(result)
+            }
+            
+        }
+
+        for(const result of results){
+            if(!result){
+                return false
+            }
+
+            return true
+        }
+    }
+
+    requestNotifyPermission = async (): Promise<boolean> =>{
+        if(Platform.OS === 'android') {
+            return true
+        }
+
+        const {status, settings} = await requestNotifications(['alert', 'sound', 'badge'])
+        return status === RESULTS.GRANTED
     }
 }
 

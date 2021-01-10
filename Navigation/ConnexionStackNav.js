@@ -1,13 +1,9 @@
 import * as React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import {TouchableOpacity,Text} from 'react-native'
 
 import SplashScreen from "../Components/Auth/SplashScreen"
 import Connexion from "../Components/Auth/Connexion"
-//import FbConnect from "../Components/Auth/FBLoginButton"
-//import GoogleConnect from "../Components/Auth/GoogleConnection"
-import Profile from "../Components/Auth/Profile"
+/*import Profile from "../Components/Auth/Profile"
 import Accueil from "../Components/Accueil"
 import Step1 from '../Components/Steps/Step1'
 import Step2 from '../Components/Steps/Step2'
@@ -17,8 +13,7 @@ import Step5 from '../Components/Steps/Step5'
 import Step6 from '../Components/Steps/Step6'
 import Step7 from '../Components/Steps/Step7'
 import Step8 from '../Components/Steps/Step8'
-import Step9 from '../Components/Steps/Step9'
-import SleyDrawerNav from './SleyDrawerNav'
+import Step9 from '../Components/Steps/Step9'*/
 
 const Stack = createStackNavigator()
 
@@ -46,16 +41,7 @@ function ConnexionStackNav() {
           component={Connexion}
           options={{ headerShown: false }}/>
 
-
-        <Stack.Screen
-          name='FbConnection'
-          component={FbConnect}/>
-
-        <Stack.Screen
-          name='GoogleConnection'
-          component={GoogleConnect}/>
-
-        <Stack.Screen
+        {/*<Stack.Screen
           name='Profile'
           component={Profile}/>
 
@@ -98,7 +84,7 @@ function ConnexionStackNav() {
         <Stack.Screen
             name='Accueil'
             component={Accueil}
-            options={{ headerShown: false }}/>
+            options={{ headerShown: false }}/> */}
       </Stack.Navigator>
   )
 }
