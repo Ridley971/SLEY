@@ -15,7 +15,6 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
 //import { useTheme } from 'react-native-paper';
-import {AuthContext} from './context'
 
 const Connexion = ({navigation}) =>{
 
@@ -28,8 +27,7 @@ const Connexion = ({navigation}) =>{
     secureTextEntry:true,
   })
 
-  //signIn dans App.js
-  const {signIn} = React.useContext(AuthContext)
+
 
   const textInputChange = (val) => {
 
@@ -53,11 +51,6 @@ const Connexion = ({navigation}) =>{
       secureTextEntry: !data.secureTextEntry
     })
   }
-
-  const loginHandle = (email, password) =>{
-    signIn(email,password)
-  }
-
 
   return(
     <View style={styles.container}>
