@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "12913524495",
+    "firebase_url": "https://sleyapps-eeaaf.firebaseio.com",
+    "project_id": "sleyapps-eeaaf",
+    "storage_bucket": "sleyapps-eeaaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12913524495:android:8955744ee6d1ae973a487a",
+        "android_client_info": {
+          "package_name": "com.sley"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12913524495-o2af26efo5navma4fsoljveq86q0hsog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO9RHWTOHlz2h0RAJAB0qmmc_9ADoC1WY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12913524495-o2af26efo5navma4fsoljveq86q0hsog.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "12913524495-04ekusiv7qh7osmjigrkee04bhmcv3nu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sley"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

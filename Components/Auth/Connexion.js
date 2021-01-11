@@ -129,6 +129,7 @@ const Connexion = ({navigation}) =>{
                 </Text>
               </LinearGradient>
           </TouchableOpacity>
+          
           <TouchableOpacity
           style={[styles.signIn,{
             borderWidth:2,

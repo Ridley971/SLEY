@@ -3,10 +3,17 @@ import React,  { useEffect }  from 'react';
 import { StyleSheet, Alert, View, ActivityIndicator } from 'react-native';
 import {Permissions, PERMISSIONS_TYPE} from './Components/AppPermissions'
 import ConnexionStackNav from './Navigation/ConnexionStackNav'
+{/*import ReservStack from './Navigation/AntrenmanStackNav'
+import Tutos from './Components/Training/Tutos'
+import Planning from './Components/Planning'
+import MesVotes from './Components/Training/MesVotes'*/}
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import {AuthContext} from "./Components/Auth/context"
+import {DrawerContent} from "./Components/CustomComponent/DrawerContent"
+import MainTabNav from './Navigation/MainTabNav'
+const Drawer = createDrawerNavigator();
 
 const App = () =>{
 
@@ -137,9 +144,8 @@ useEffect(()=> {
         <AuthContext.Provider value={authContext}>
           <NavigationContainer>
 
-
-            {/*
-              loginState.userToken !== null ? (
+          <ConnexionStackNav/>
+              {/*loginState.userToken !== null ? (
                 <Drawer.Navigator
                     drawerContent={props => <DrawerContent{...props}/>}
                     drawerStyle={{
@@ -147,18 +153,18 @@ useEffect(()=> {
                       width: 240,
                     }}>
                   <Drawer.Screen name="Accueil" component={MainTabNav} />
-                  <Drawer.Screen name="Reserv" component={ReservStack} />
+                 <Drawer.Screen name="Reserv" component={ReservStack} />
                   <Drawer.Screen name="Tutos" component={Tutos} />
                   <Drawer.Screen name="MyReservations" component={Planning } />
                   <Drawer.Screen name="MyVotes" component={MesVotes} />
                 </Drawer.Navigator>
 
 
-            ) : (*/
+                  ) : (
 
               <ConnexionStackNav/>
-            //)
-          }
+            )*/}
+          
 
           </NavigationContainer>
       </AuthContext.Provider>

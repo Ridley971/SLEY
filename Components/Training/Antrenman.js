@@ -1,6 +1,6 @@
 import React from 'react'
 import {StyleSheet, View,Image, Text,TouchableOpacity, ScrollView} from 'react-native'
-import { connect } from 'react-redux'
+
 
 import SleyBackground from '../CustomComponent/SleyBackground'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'

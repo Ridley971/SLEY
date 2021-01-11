@@ -3,8 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import SplashScreen from "../Components/Auth/SplashScreen"
 import Connexion from "../Components/Auth/Connexion"
-/*import Profile from "../Components/Auth/Profile"
 import Accueil from "../Components/Accueil"
+/*import Profile from "../Components/Auth/Profile"
 import Step1 from '../Components/Steps/Step1'
 import Step2 from '../Components/Steps/Step2'
 import Step3 from '../Components/Steps/Step3'
@@ -40,6 +40,12 @@ function ConnexionStackNav() {
           name='Connexion'
           component={Connexion}
           options={{ headerShown: false }}/>
+
+        
+        <Stack.Screen
+            name='Accueil'
+            component={Accueil}
+            options={{ headerShown: false }}/> 
 
         {/*<Stack.Screen
           name='Profile'
@@ -80,11 +86,7 @@ function ConnexionStackNav() {
           <Stack.Screen
             name='Step9'
             component={Step9}/>
-
-        <Stack.Screen
-            name='Accueil'
-            component={Accueil}
-            options={{ headerShown: false }}/> */}
+      */}
       </Stack.Navigator>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import {StyleSheet, View, Image, TouchableOpacity, Text, ScrollView,Button} from 'react-native'
-import { connect } from 'react-redux'
 import SleyBackground from './CustomComponent/SleyBackground'
 import CommonText from './CustomComponent/CommonText'
 import ToggleDrawer from './CustomComponent/ToggleDrawer'

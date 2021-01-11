@@ -1,6 +1,6 @@
 import React from 'react'
 import {StyleSheet, View, Text} from 'react-native'
-import { connect } from 'react-redux'
+
 
 class InfoPratique extends React.Component {
 

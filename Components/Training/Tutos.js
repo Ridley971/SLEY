@@ -1,7 +1,5 @@
 import React from 'react'
 import {ImageBackground,StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons';
-import { connect } from 'react-redux'
 
 import SecondBackground from '../CustomComponent/SecondBackground'
 

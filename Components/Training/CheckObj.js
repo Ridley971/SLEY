@@ -1,7 +1,7 @@
 import React from 'react'
 import {StyleSheet, View,Image, Text,TouchableOpacity} from 'react-native'
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
-import { connect } from 'react-redux'
+
 
 import SleyBackground from '../CustomComponent/SleyBackground'
 

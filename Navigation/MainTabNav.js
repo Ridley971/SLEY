@@ -2,12 +2,10 @@ import  React from 'react';
 import { StyleSheet,Text, View, Image,TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import ProfileStackNav from "./ProfileStackNav"
-import SleyDrawerNav from "./SleyDrawerNav"
 import AccueilStackNav from "./AccueilStackNav"
-import BoutikStackNav from "./BoutikStackNav"
+/*import ProfileStackNav from "./ProfileStackNav"
+import BoutikStackNav from "./BoutikStackNav"*/
 
-import Connexion from "../Components/Auth/Connexion"
 
 const Tab = createBottomTabNavigator();
 
@@ -24,17 +22,6 @@ const  MainTabNav =({navigation})=>(
             }}
           >
 
-         <Tab.Screen name="BoutikStackNav"
-            component={BoutikStackNav}
-            options={{
-                  tabBarLabel: 'Boutique',
-                  tabBarIcon: () => {
-                    return <Image
-                      source={require('../assets/store3.png')}
-                      style={styles.tab_Icon}/>
-                  },
-                }}/>
-
            <Tab.Screen name="AccueilStackNav"
               component={AccueilStackNav}
               options={{
@@ -46,6 +33,18 @@ const  MainTabNav =({navigation})=>(
                     },
                   }}/>
 
+       {/* <Tab.Screen name="BoutikStackNav"
+            component={BoutikStackNav}
+            options={{
+                  tabBarLabel: 'Boutique',
+                  tabBarIcon: () => {
+                    return <Image
+                      source={require('../assets/store3.png')}
+                      style={styles.tab_Icon}/>
+                  },
+                }}/>
+
+
            <Tab.Screen name="Profil"
             component={ProfileStackNav}
             options={{
@@ -55,7 +54,7 @@ const  MainTabNav =({navigation})=>(
                       source={require('../assets/profile.png')}
                       style={styles.tab_Icon}/>
                   },
-                }}/>
+                }}/>*/}
 
         </Tab.Navigator>
   )

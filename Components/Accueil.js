@@ -1,5 +1,5 @@
 import React from 'react'
-import  {Animated,StyleSheet,View,Button,Image,Text,Alert, TouchableOpacity,ScrollView} from 'react-native'
+import  {Animated,StyleSheet,View,Image,Text, TouchableOpacity,ScrollView} from 'react-native'
 import CommonText from "./CustomComponent/CommonText"
 
 
