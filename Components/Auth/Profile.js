@@ -7,7 +7,7 @@ export default class ProfileScreen extends Component {
       <View style={styles.container}>
         <Text> Profile Screen </Text>
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-          Welcome, {this.props.navigation.getParam("username")}
+          Welcome, Lenom du USER
         </Text>
         <Button
           title="Sign out"

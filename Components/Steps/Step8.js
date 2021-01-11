@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
     View,
     Text,
@@ -13,7 +13,7 @@ import * as Animatable from 'react-native-animatable';
 import { LinearGradient } from 'expo-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-
+import {AuthContext} from '../Auth/AuthProvider'
 import { useTheme } from 'react-native-paper';
 
 
@@ -138,6 +138,8 @@ const Step8 = ({navigation}) =>{
       })
     }
   }
+
+  const {register} = useContext(AuthContext)
 
   return(
     <View style={styles.container}>
@@ -326,7 +328,7 @@ const Step8 = ({navigation}) =>{
 
           <TouchableOpacity
           style= {styles.button}
-          onPress={() => navigation.navigate('Step9')}>
+          onPress={() => register(data.email,data.password)}>
               <LinearGradient
                 colors={['black', 'white']}
                 style={styles.signIn}>
