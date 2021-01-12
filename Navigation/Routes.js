@@ -2,11 +2,12 @@ import React,  { useContext, useEffect, useState }  from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import {AuthContext} from "../Components/Auth/AuthProvider"
 import auth from '@react-native-firebase/auth'
-
-
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import {DrawerContent} from "../Components/CustomComponent/DrawerContent"
 import ConnexionStackNav from './ConnexionStackNav'
-import BoutikStackNav from './BoutikStackNav'
+import MainTabNav from './MainTabNav'
 
+const Drawer = createDrawerNavigator()
 
 const Routes = () =>{
 
@@ -38,20 +39,24 @@ const Routes = () =>{
       return (
           <NavigationContainer>
 
-            {user ? <BoutikStackNav/> : <ConnexionStackNav/>}
-              {/*loginState.userToken !== null ? (
-                <Drawer.Navigator
+            {user ? 
+              <Drawer.Navigator
                     drawerContent={props => <DrawerContent{...props}/>}
                     drawerStyle={{
                       backgroundColor: 'rgba(255, 255, 0, 0.9)',
                       width: 240,
                     }}>
                   <Drawer.Screen name="Accueil" component={MainTabNav} />
+                  </Drawer.Navigator> 
+                  : 
+                  <ConnexionStackNav/>}
+              {/*loginState.userToken !== null ? (
+                
                  <Drawer.Screen name="Reserv" component={ReservStack} />
                   <Drawer.Screen name="Tutos" component={Tutos} />
                   <Drawer.Screen name="MyReservations" component={Planning } />
                   <Drawer.Screen name="MyVotes" component={MesVotes} />
-                </Drawer.Navigator>
+                
 
 
                   ) : (

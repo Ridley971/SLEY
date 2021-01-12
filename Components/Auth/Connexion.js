@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import {
     View,
     Text,
@@ -13,12 +13,12 @@ import * as Animatable from 'react-native-animatable';
 import { LinearGradient } from 'expo-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-
+import {AuthContext} from './AuthProvider'
 //import { useTheme } from 'react-native-paper';
 
 const Connexion = ({navigation}) =>{
 
-  const [data, setData] = React.useState({
+  const [data, setData] = useState({
     email: '',
     password: '',
     check_textInputChange: false,
@@ -51,6 +51,8 @@ const Connexion = ({navigation}) =>{
       secureTextEntry: !data.secureTextEntry
     })
   }
+
+  const {login} = useContext(AuthContext)
 
   return(
     <View style={styles.container}>
@@ -113,7 +115,7 @@ const Connexion = ({navigation}) =>{
             </Animatable.View>
           }
           <TouchableOpacity style= {styles.button}
-          onPress= {()=> loginHandle(data.email, data.password)}>
+          onPress= {()=> login(data.email, data.password)}>
               <LinearGradient
                 colors={['black', 'white']}
                 style={styles.signIn}>

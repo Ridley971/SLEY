@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {View, StyleSheet} from 'react-native'
 import{
   DrawerContentScrollView,
@@ -16,12 +16,12 @@ import {
 } from 'react-native-paper'
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-import {AuthContext} from '../Auth/context'
+import {AuthContext} from '../Auth/AuthProvider'
 
 
 export function DrawerContent(props) {
 
-  const {signOut} = React.useContext(AuthContext)
+  const {user, logout} = useContext(AuthContext)
   return (
     <View style= {{flex:1}}>
       <DrawerContentScrollView {...props}>
@@ -36,7 +36,7 @@ export function DrawerContent(props) {
                 size= {100}
                 />
               <View>
-                <Title style={styles.title}>Le Rid</Title>
+                <Title style={styles.title}>{user.uid}</Title>
                 <Caption style={styles.caption}> Caption</Caption>
               </View>
             </View>
@@ -106,7 +106,7 @@ export function DrawerContent(props) {
           size={size}/>
         )}
         label="Se déconnecter "
-        onPress= {() => {signOut()}}
+        onPress= {() => {logout()}}
         />
       </Drawer.Section>
     </View>
