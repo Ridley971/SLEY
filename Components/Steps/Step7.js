@@ -9,21 +9,9 @@ class Step7 extends React.Component {
 
   render() {
 
-    this.props.navigation.setOptions({
-        headerRight: () => (
-          <TouchableOpacity
-            onPress={()=> this.props.navigation.popToTop()}>
-                <Text style={{
-                  fontWeight:'bold'}}>
-                Connexion
-                </Text>
-          </TouchableOpacity>
-        ),
-      })
-
     return(
       <SleyBackground style={styles.main_container}>
-        <Text style={styles.text_Title}> Quelle est votre cible taux de graisse corporelle ?</Text>
+        <Text style={styles.text_Title}> Quelle taux de graisse corporelle cilez-vous ?</Text>
 
         <BodiesList bodies ={bodies} actionTaux="UPDATE_TXCIBLE"/>
 

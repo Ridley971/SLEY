@@ -36,7 +36,7 @@ export function DrawerContent(props) {
                 size= {100}
                 />
               <View>
-                <Title style={styles.title}>{user.uid}</Title>
+                <Title style={styles.title}>{user.email}</Title>
                 <Caption style={styles.caption}> Caption</Caption>
               </View>
             </View>

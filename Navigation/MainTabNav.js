@@ -3,8 +3,8 @@ import { StyleSheet,Text, View, Image,TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import AccueilStackNav from "./AccueilStackNav"
-/*import ProfileStackNav from "./ProfileStackNav"
-import BoutikStackNav from "./BoutikStackNav"*/
+import ProfileStackNav from "./ProfileStackNav"
+import BoutikStackNav from "./BoutikStackNav"
 
 
 const Tab = createBottomTabNavigator();
@@ -33,7 +33,7 @@ const  MainTabNav =({navigation})=>(
                     },
                   }}/>
 
-       {/* <Tab.Screen name="BoutikStackNav"
+       <Tab.Screen name="BoutikStackNav"
             component={BoutikStackNav}
             options={{
                   tabBarLabel: 'Boutique',
@@ -54,7 +54,7 @@ const  MainTabNav =({navigation})=>(
                       source={require('../assets/profile.png')}
                       style={styles.tab_Icon}/>
                   },
-                }}/>*/}
+                }}/>
 
         </Tab.Navigator>
   )

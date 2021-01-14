@@ -3,29 +3,19 @@ import {StyleSheet, View, Text,Button,Image,TouchableOpacity } from 'react-nativ
 import SleyBackground from "../CustomComponent/SleyBackground"
 import StepsTitle from "../CustomComponent/StepsTitle"
 
-class Step2 extends React.Component {
+const Step2  = ({route,navigation}) =>{
+ 
+  const {user} = route.params
 
-  _NextStep(sexe) {
+  
+  const _NextStep = (sexe) =>{
     /*const action = { type: "UPDATE_SEXE", value: sexe }
     this.props.dispatch(action)*/
-    console.log(sexe);
-    this.props.navigation.navigate("Step3",{sexe: sexe})
+    user.sexe= sexe
+    console.log("user", user)
+    console.log("obj",user.sexe)
+    navigation.navigate("Step3",{user: user})
    }
-
-  render()
-  {
-
-    this.props.navigation.setOptions({
-        headerRight: () => (
-          <TouchableOpacity
-            onPress={()=> this.props.navigation.popToTop()}>
-                <Text style={{
-                  fontWeight:'bold'}}>
-                Connexion
-                </Text>
-          </TouchableOpacity>
-        ),
-      })
 
     return(
       <SleyBackground>
@@ -34,14 +24,14 @@ class Step2 extends React.Component {
         <View style={styles.gender_container}>
           <TouchableOpacity
           style={styles.touchMale}
-          onPress={() => {this._NextStep("M")}}>
+          onPress={() => _NextStep("M")}>
           <Image
               style={{width:150, height: 150}}
               source={require('../../assets/gender-Male.png')}
                 />
           </TouchableOpacity>
           <TouchableOpacity style={styles.touchFemale}
-           onPress={() => {this._NextStep("F")}}>
+           onPress={() => _NextStep("F")}>
 
           <Image
               style={{width: 150, height: 150}}
@@ -54,7 +44,7 @@ class Step2 extends React.Component {
     </SleyBackground>
     )
   }
-}
+
 const styles={
 
   gender_container:{

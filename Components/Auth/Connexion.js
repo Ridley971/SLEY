@@ -130,7 +130,7 @@ const Connexion = ({navigation}) =>{
             borderWidth:2,
             marginTop:20
           }]}
-          onPress={()=> navigation.navigate('Step8')}
+          onPress={()=> navigation.navigate('Step1')}
           >
             <Text style={styles.textSign}>S'inscrire</Text>
           </TouchableOpacity>

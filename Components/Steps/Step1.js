@@ -1,32 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {StyleSheet, View, Text,Button,TouchableOpacity,ScrollView } from 'react-native'
 import SleyBackground from "../CustomComponent/SleyBackground"
 import CommonText from "../CustomComponent/CommonText"
 import StepsTitle from "../CustomComponent/StepsTitle"
-import { connect } from 'react-redux'
 
-class Step1 extends React.Component {
 
-  _NextStep(idOBJ)
-   {
-     /*const action = { type: "UPDATE_OBJ", value: idOBJ }
-     this.props.dispatch(action)*/
-     this.props.navigation.navigate("Step2")
+
+
+const Step1 = ({navigation}) => {
+
+  const user={
+    idObj: '',
+    sexe: '',
+    dateN:'',
+    taille:'',
+    poids: '',
+    txAct: '',
+    txCible: '',
+    idForm : '',
+  }
+
+ const  _NextStep =(idOBJ) =>{
+     user.idObj =idOBJ
+     navigation.navigate("Step2",{user: user})
    }
-
-  render() {
-
-    this.props.navigation.setOptions({
-        headerRight: () => (
-          <TouchableOpacity
-            onPress={()=> this.props.navigation.popToTop()}>
-                <Text style={{
-                  fontWeight:'bold'}}>
-                Connexion
-                </Text>
-          </TouchableOpacity>
-        ),
-      })
 
     return(
       <SleyBackground>
@@ -37,21 +34,21 @@ class Step1 extends React.Component {
               <View style={styles.obj_container} >
                     <TouchableOpacity
                       style={styles.touchOp}
-                      onPress={() => {this._NextStep(1)}}>
+                      onPress={() => _NextStep(1)}>
                       <Text style={styles.text_Obj}>Bruler de la graisse</Text>
                       <Text style={styles.text_Desc}> Mincir et affiner son corps</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                       style={styles.touchOp}
-                      onPress={() => {this._NextStep(2)}}>
+                      onPress={() => _NextStep(2)}>
                       <Text style={styles.text_Obj}>Être en bonne santé</Text>
                       <Text style={styles.text_Desc}>Vivre sainement</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                       style={styles.touchOp}
-                      onPress={() => {this._NextStep(3)}}>
+                      onPress={() => _NextStep(3)}>
                       <Text style={styles.text_Obj}>Prendre du muscle</Text>
                       <Text style={styles.text_Desc}>Gagner de la masse musculaire & force</Text>
                     </TouchableOpacity>
@@ -65,7 +62,6 @@ class Step1 extends React.Component {
     </SleyBackground>
     )
   }
-}
 
 const styles = StyleSheet.create({
 

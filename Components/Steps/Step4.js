@@ -1,52 +1,27 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {StyleSheet, View, Text,TextInput, Button, TouchableOpacity } from 'react-native'
-import RNPickerSelect from 'react-native-picker-select'
+//import RNPickerSelect from 'react-native-picker-select'
 import SleyBackground from "../CustomComponent/SleyBackground"
 import StepsTitle from "../CustomComponent/StepsTitle"
 //import {connect} from "react-redux"
 
 
-class Step4 extends React.Component {
-  constructor(props)
-   {
-    super(props)
-    this.tailleText = ""
-  }
+const Step4 =({navigation, route}) => {
+  const {user} = route.params
+  const [taille, setTaille]= useState(0)
 
-  _textInputChanged(text) {
-    console.log(text);
-    this.tailleText = text
-  }
 
-  _NextStep(taille)
-  {
-    /*const action = { type: "UPDATE_TAILLE", value: taille }
-    this.props.dispatch(action)*/
-    this.props.navigation.navigate("Step5")
+  const _NextStep=(taille)=>{
+    user.taille = taille
+    //navigation.navigate("Step5")
    }
-
-
-  render()
-  {
-
-    this.props.navigation.setOptions({
-        headerRight: () => (
-          <TouchableOpacity
-            onPress={()=> this.props.navigation.popToTop()}>
-                <Text style={{
-                  fontWeight:'bold'}}>
-                Connexion
-                </Text>
-          </TouchableOpacity>
-        ),
-      })
 
     return(
       <SleyBackground>
         <StepsTitle style={{flex:1}}> Quelle taille faites vous ?</StepsTitle>
         <View style={{flex:4,justifyContent:"center",alignItems:"center"}}>
             <TextInput
-              onChangeText={(text) => this._textInputChanged(text)}
+              onChangeText={(text) => setTaille(text)}
               placeholder="0"
               placeholderTextColor="#8A8985"
               keyboardType={'numeric'}
@@ -57,7 +32,7 @@ class Step4 extends React.Component {
               />
               <View style={{ height: 50, width: "60%", borderRadius:15,
                 justifyContent:"center", backgroundColor:'rgba(255, 255, 0, 0.7)' }}>
-                  <RNPickerSelect
+                 {/*  <RNPickerSelect
 
                     placeholder={{label: 'Choisissez votre mesure...',value: null,
                                   color: 'black'}}
@@ -67,12 +42,12 @@ class Step4 extends React.Component {
                       { label: 'Centimètres', value: 'cm'},
                       { label: 'Pieds', value: 'pds' }
                   ]}
-                  />
+                  /> */}
               </View>
         </View>
         <TouchableOpacity
             style={styles.touchButton}
-            onPress={() => {this._NextStep(this.tailleText)}}>
+            onPress={() => _NextStep(taille)}>
             <Text style={styles.text_Button}>Valider</Text>
         </TouchableOpacity>
 
@@ -80,7 +55,7 @@ class Step4 extends React.Component {
     </SleyBackground>
     )
   }
-}
+
 const styles={
 
   touchButton:

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {StyleSheet, View, Text,Button,Platform,TouchableOpacity } from 'react-native'
 
 import CustomDatePicker from '../CustomComponent/CustomDatePicker'
@@ -8,47 +8,28 @@ import CommonText from "../CustomComponent/CommonText"
 import moment from "moment/min/moment-with-locales";
 //import {connect} from "react-redux"
 
-class Step3 extends React.Component
-{
-  constructor(props)
-  {
-    super(props);
+const Step3 = ({navigation, route}) => {
+
+    const {user} = route.params
+
+    const today = new Date()
+    const year = moment(today).format("YYYY");
     moment.locale('fr')
-    this.state = {
-      date:moment(new Date()),
-      showDatePicker:false
-     }
-  }
+
+    const [date, setDate] = useState(today)
+    const [showDatePicker, setShowDatePicker] = useState(false)
+    
+  
 
   
 
-  _NextStep(dateN, sexe) {
+  const _NextStep = (dateN) =>{
     /*const action = { type: "UPDATE_DATEN", value: dateN }
     this.props.dispatch(action)*/
-
-    this.props.navigation.navigate("Step4")
+    user.dateN = dateN
+    console.log (user)
+    navigation.navigate("Step4",{user: user})
    }
-
-  render()
-  {
-    this.props.navigation.setOptions({
-        headerRight: () => (
-          <TouchableOpacity
-            onPress={()=> this.props.navigation.popToTop()}>
-                <Text style={{
-                  fontWeight:'bold'}}>
-                Connexion
-                </Text>
-          </TouchableOpacity>
-        ),
-      })
-
-    const { date} = this.state
-    const today = new Date()
-    const year = moment(today).format("YYYY");
-
-
-
         return(
             <SleyBackground>
 
@@ -63,15 +44,14 @@ class Step3 extends React.Component
 
 
 
-                <TouchableOpacity style={styles.touchButton} onPress={() => {
-                    this._NextStep(moment(date).format("L"), this.props.route.sexe)}}>
+                <TouchableOpacity style={styles.touchButton} onPress={() => _NextStep()}>
                   <Text style={styles.text_Button}>Valider</Text>
                 </TouchableOpacity>
 
             </SleyBackground>
         )
   }
-}
+
 
 const styles={
   touchButton:{

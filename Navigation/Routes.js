@@ -5,7 +5,12 @@ import auth from '@react-native-firebase/auth'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import {DrawerContent} from "../Components/CustomComponent/DrawerContent"
 import ConnexionStackNav from './ConnexionStackNav'
+
 import MainTabNav from './MainTabNav'
+import Tutos from '../Components/Training/Tutos'
+import MesVotes from '../Components/Training/MesVotes'
+import PlanningMyReserv from "../Components/Planning"
+//import ReservStack from './AntrenmanStackNav'
 
 const Drawer = createDrawerNavigator()
 
@@ -47,22 +52,15 @@ const Routes = () =>{
                       width: 240,
                     }}>
                   <Drawer.Screen name="Accueil" component={MainTabNav} />
+
+                  
+                  <Drawer.Screen name="Tutos" component={Tutos} />
+                  <Drawer.Screen name="MyVotes" component={MesVotes} />
+                  <Drawer.Screen name="MyReservations" component={PlanningMyReserv } />
+                   {/*<Drawer.Screen name="Reserv" component={ReservStack} />*/}
                   </Drawer.Navigator> 
                   : 
                   <ConnexionStackNav/>}
-              {/*loginState.userToken !== null ? (
-                
-                 <Drawer.Screen name="Reserv" component={ReservStack} />
-                  <Drawer.Screen name="Tutos" component={Tutos} />
-                  <Drawer.Screen name="MyReservations" component={Planning } />
-                  <Drawer.Screen name="MyVotes" component={MesVotes} />
-                
-
-
-                  ) : (
-
-              <ConnexionStackNav/>
-            )*/}
           
 
           </NavigationContainer>
