@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {StyleSheet,View, Text, Image, ScrollView,Button, TouchableOpacity} from 'react-native'
 import bodies from "../../Helpers/body-percent"
 import SleyBackground from "../CustomComponent/SleyBackground"
@@ -6,32 +6,36 @@ import BodiesList from "../CustomComponent/BodiesList"
 import StepsTitle from "../CustomComponent/StepsTitle"
 //import {connect} from "react-redux"
 
-class Step6 extends React.Component {
-
-  _NextStep()
-  {
-    this.props.navigation.navigate("Step7")
+const Step6 = ({navigation, route}) => {
+  const {user} = route.params
+  const [idTaux, setIdTaux] = useState()
+   
+  const _NextStep = () =>{
+    console.log("Step 6 idTaux : ", idTaux)
+    user.txAct= idTaux
+    console.log("Step 6 user : ", user)
+    //navigation.navigate("Step7")
    }
 
-  render() {
+  
 
     return (
       <SleyBackground>
         <StepsTitle style={styles.text_Title}> Quelle est votre taux de graisse corporelle ?</StepsTitle>
 
 
-        <BodiesList bodies ={bodies} actionTaux="UPDATE_TXACT"/>
+        <BodiesList bodies ={bodies} user={user} sexe={user.sexe} setIdTaux= { setIdTaux}/>
 
         <TouchableOpacity
             style={styles.touchButton}
-            onPress={() => {this._NextStep()}}>
+            onPress={() => _NextStep()}>
             <Text style={styles.text_Button}>Valider</Text>
         </TouchableOpacity>
 
     </SleyBackground>
     )
   }
-}
+
 
 const styles={
   main_container:{

@@ -10,7 +10,7 @@ class BodyItem extends React.Component {
     return (
         <TouchableHighlight
          style={isSelected ? styles.touchOpPress : styles.touchOp}
-         onPress={() => selectTxGraisse(body.id)}
+         onPress={() =>  selectTxGraisse(body.id)}
          >
           <View style={{flex:1, justifyContent:"center",alignItems:"center"}}>
             <Image

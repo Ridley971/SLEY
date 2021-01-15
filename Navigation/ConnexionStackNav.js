@@ -11,9 +11,9 @@ import Step1 from '../Components/Steps/Step1'
 import Step2 from '../Components/Steps/Step2'
 import Step3 from '../Components/Steps/Step3'
 import Step4 from '../Components/Steps/Step4'
-/*import Step5 from '../Components/Steps/Step5'
+import Step5 from '../Components/Steps/Step5'
 import Step6 from '../Components/Steps/Step6'
-import Step7 from '../Components/Steps/Step7'
+/*import Step7 from '../Components/Steps/Step7'
 import Step9 from '../Components/Steps/Step9'*/
 
 const Stack = createStackNavigator()
@@ -81,7 +81,7 @@ function ConnexionStackNav() {
           name='Step4'
           component={Step4}/>
 
-        {/*<Stack.Screen
+        <Stack.Screen
           name='Step5'
           component={Step5}/>
 
@@ -89,7 +89,7 @@ function ConnexionStackNav() {
           name='Step6'
           component={Step6}/>
 
-        <Stack.Screen
+      {/*   <Stack.Screen
           name='Step7'
           component={Step7}/>
 

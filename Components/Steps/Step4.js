@@ -8,12 +8,13 @@ import StepsTitle from "../CustomComponent/StepsTitle"
 
 const Step4 =({navigation, route}) => {
   const {user} = route.params
-  const [taille, setTaille]= useState(0)
+  const [taille, setTaille]= useState()
 
 
   const _NextStep=(taille)=>{
     user.taille = taille
-    //navigation.navigate("Step5")
+    console.log(user)
+    navigation.navigate("Step5",{user:user})
    }
 
     return(

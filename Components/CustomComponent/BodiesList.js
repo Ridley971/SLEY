@@ -1,56 +1,49 @@
 // Components/BodiesList.js
 
-import React from 'react'
-import { StyleSheet, FlatList,SafeAreaView } from 'react-native'
+import React , {useState} from 'react'
+import { FlatList,SafeAreaView } from 'react-native'
 import BodyItem from './BodyItem'
 //import { connect } from 'react-redux'
 
-class BodiesList extends React.Component {
+const BodiesList = (props)=>{
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      bodies: [],
-      selectedbody:0
-    }
-  }
+    const [selectedbody, setSelectBody] = useState()
 
-  _selectTxGraisse = (bodyId) =>
-  {
-    const action = { type: this.props.actionTaux, value: bodyId }
+  const _selectTxGraisse = (bodyId) =>{
 
-    if (this.state.selectedbody===0 ||
-      this.state.selectedbody != bodyId)
+
+    if (selectedbody===0 || selectedbody != bodyId)
     {
-        this.setState({ selectedbody:bodyId });
+        setSelectBody( bodyId );
         //this.props.dispatch(action)
+        props.setIdTaux(bodyId)
     }
     else {
-      this.setState({ selectedbody:0 });
+      setSelectBody( 0 );
+      props.setIdTaux(0)
       //this.props.dispatch(action)
     }
+    
 
 
   }
-
-  render() {
     return (
        <SafeAreaView  style={{flex:1, alignItems:"center"}}>
         <FlatList
           style={{flex:1}}
-          data={this.props.bodies}
+          data={props.bodies}
           keyExtractor={(item) => item.id.toString()}
           horizontal= {true}
           renderItem=
           {
             ({item}) =>
               {
-                if (this.props.sexe === item.sexe.toString())
+                if (props.sexe === item.sexe.toString())
                 {
                   return (
                     <BodyItem body={item}
-                    isSelected={item.id ===this.state.selectedbody?true:false}
-                    selectTxGraisse={this._selectTxGraisse}/>
+                    isSelected={item.id ===selectedbody?true:false}
+                    selectTxGraisse={_selectTxGraisse}/>
                   )
                 }
               }
@@ -59,7 +52,6 @@ class BodiesList extends React.Component {
         </SafeAreaView>
     )
   }
-}
 
 export default BodiesList
 /*const mapStateToProps = (state) => {
