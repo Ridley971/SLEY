@@ -11,10 +11,8 @@ const Step6 = ({navigation, route}) => {
   const [idTaux, setIdTaux] = useState()
    
   const _NextStep = () =>{
-    console.log("Step 6 idTaux : ", idTaux)
     user.txAct= idTaux
-    console.log("Step 6 user : ", user)
-    //navigation.navigate("Step7")
+    navigation.navigate("Step7", {user:user})
    }
 
   
@@ -24,7 +22,7 @@ const Step6 = ({navigation, route}) => {
         <StepsTitle style={styles.text_Title}> Quelle est votre taux de graisse corporelle ?</StepsTitle>
 
 
-        <BodiesList bodies ={bodies} user={user} sexe={user.sexe} setIdTaux= { setIdTaux}/>
+        <BodiesList bodies ={bodies}  sexe={user.sexe} setIdTaux= { setIdTaux}/>
 
         <TouchableOpacity
             style={styles.touchButton}

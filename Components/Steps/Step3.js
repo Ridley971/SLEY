@@ -16,19 +16,18 @@ const Step3 = ({navigation, route}) => {
     const year = moment(today).format("YYYY");
     moment.locale('fr')
 
-    const [date, setDate] = useState(today)
-    const [showDatePicker, setShowDatePicker] = useState(false)
+    const [date, setDate] = useState()
     
   
 
   
 
-  const _NextStep = (dateN) =>{
+  const _NextStep = () =>{
     /*const action = { type: "UPDATE_DATEN", value: dateN }
     this.props.dispatch(action)*/
-    user.dateN = dateN
+    user.dateN = date
     console.log (user)
-    navigation.navigate("Step4",{user: user})
+    //navigation.navigate("Step4",{user: user})
    }
         return(
             <SleyBackground>
@@ -36,7 +35,7 @@ const Step3 = ({navigation, route}) => {
                 <StepsTitle style={{flex:1,justifyContent:"center"}}>Quel est votre Date de naissance ?</StepsTitle>
 
 
-                <CustomDatePicker/>
+                <CustomDatePicker  setDate={setDate}/>
 
                 <CommonText style={styles.text_Detail}>
                 Votre âge nous permet de mieux personnaliser

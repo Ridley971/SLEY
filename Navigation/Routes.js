@@ -12,6 +12,7 @@ import MesVotes from '../Components/Training/MesVotes'
 import PlanningMyReserv from "../Components/Planning"
 //import ReservStack from './AntrenmanStackNav'
 
+import DatePicker from '../Components/CustomComponent/CustomDatePicker'
 const Drawer = createDrawerNavigator()
 
 const Routes = () =>{
@@ -42,7 +43,7 @@ const Routes = () =>{
   if (initializing) return null;
 
       return (
-          <NavigationContainer>
+           <NavigationContainer>
 
             {user ? 
               <Drawer.Navigator
@@ -57,13 +58,14 @@ const Routes = () =>{
                   <Drawer.Screen name="Tutos" component={Tutos} />
                   <Drawer.Screen name="MyVotes" component={MesVotes} />
                   <Drawer.Screen name="MyReservations" component={PlanningMyReserv } />
-                   {/*<Drawer.Screen name="Reserv" component={ReservStack} />*/}
+                   //<Drawer.Screen name="Reserv" component={ReservStack} />
                   </Drawer.Navigator> 
                   : 
                   <ConnexionStackNav/>}
           
 
-          </NavigationContainer>
+          </NavigationContainer> 
+          
       );
   }
 

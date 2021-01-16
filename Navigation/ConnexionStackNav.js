@@ -6,15 +6,15 @@ import SplashScreen from "../Components/Auth/SplashScreen"
 import Connexion from "../Components/Auth/Connexion"
 import Accueil from "../Components/Accueil"
 import Profile from "../Components/Auth/Profile"
-import Step8 from '../Components/Steps/Step8'
 import Step1 from '../Components/Steps/Step1'
 import Step2 from '../Components/Steps/Step2'
 import Step3 from '../Components/Steps/Step3'
 import Step4 from '../Components/Steps/Step4'
 import Step5 from '../Components/Steps/Step5'
 import Step6 from '../Components/Steps/Step6'
-/*import Step7 from '../Components/Steps/Step7'
-import Step9 from '../Components/Steps/Step9'*/
+import Step7 from '../Components/Steps/Step7'
+import Step8 from '../Components/Steps/Step8'
+//import Step9 from '../Components/Steps/Step9'
 
 const Stack = createStackNavigator()
 
@@ -56,11 +56,6 @@ function ConnexionStackNav() {
             component={Accueil}
             options={{ headerShown: false }}/> 
 
-
-        <Stack.Screen
-          name='Step8'
-          component={Step8}/>
-
         <Stack.Screen
           name='Profile'
           component={Profile}/>
@@ -89,12 +84,15 @@ function ConnexionStackNav() {
           name='Step6'
           component={Step6}/>
 
-      {/*   <Stack.Screen
+       <Stack.Screen
           name='Step7'
           component={Step7}/>
 
 
-          <Stack.Screen
+        <Stack.Screen
+          name='Step8'
+          component={Step8}/>
+         {/*   <Stack.Screen
             name='Step9'
             component={Step9}/>
       */}

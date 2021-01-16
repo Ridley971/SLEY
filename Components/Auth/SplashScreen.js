@@ -28,7 +28,7 @@ const SplashScreen = ({navigation}) => {
         <Animatable.View
           animation='fadeInUpBig'
           style={styles.footer}>
-          <Text style={styles.title}>Stay connected with everyone</Text>
+          <Text style={styles.title}>Stay connected with everyone RID</Text>
             <Text style={styles.text}>Sign in with account</Text>
               <View style={styles.button}>
                   <TouchableOpacity onPress={()=> navigation.navigate('Connexion')}>
