@@ -95,6 +95,7 @@ PODS:
   - GoogleUtilities/Reachability (7.1.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.5.0)
+  - IQKeyboardManager (4.0.13)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
     - nanopb/encode (= 2.30906.0)
@@ -339,10 +340,16 @@ PODS:
     - React-Core (= 0.63.4)
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
+  - ReactNativeKeyboardManager (4.0.13-17):
+    - IQKeyboardManager (= 4.0.13)
+    - React
+    - React-RCTText
   - RNCAsyncStorage (1.13.2):
     - React
   - RNCMaskedView (0.1.10):
     - React
+  - RNCPicker (1.8.1):
+    - React-Core
   - RNDateTimePicker (2.4.0):
     - React
   - RNFBApp (10.4.0):
@@ -429,8 +436,10 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - ReactNativeKeyboardManager (from `../node_modules/react-native-keyboard-manager`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - "RNCPicker (from `../node_modules/@react-native-community/picker`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBAuth (from `../node_modules/@react-native-firebase/auth`)"
@@ -464,6 +473,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - IQKeyboardManager
     - nanopb
     - PromisesObjC
 
@@ -558,10 +568,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  ReactNativeKeyboardManager:
+    :path: "../node_modules/react-native-keyboard-manager"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
+  RNCPicker:
+    :path: "../node_modules/@react-native-community/picker"
   RNDateTimePicker:
     :path: "../node_modules/@react-native-community/datetimepicker"
   RNFBApp:
@@ -635,6 +649,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 116c84c4bdeb76be2a7a46de51244368f9794eab
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   Permission-Calendars: aafa227e5dee83c7346fc2ca488d45ca1d63a148
   Permission-Camera: 119b01de97a5b3edb637999e38476b68143b9d17
@@ -663,8 +678,10 @@ SPEC CHECKSUMS:
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
+  ReactNativeKeyboardManager: d0e285b82ef60a861d71834d8e996fbc09607a67
   RNCAsyncStorage: 05bae7ecfab1cbd5441993f1ca098f7c3b3f8d0e
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
+  RNCPicker: 914b557e20b3b8317b084aca9ff4b4edb95f61e4
   RNDateTimePicker: c4285bfdd87430f1e575b81a4742b7586a09d53e
   RNFBApp: a9af8372c9c2b2135ffa78817fd2d8baf3ee632e
   RNFBAuth: 45d680dd8f6648927517c6ba1eb9cbef657296d5

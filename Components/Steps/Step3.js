@@ -27,7 +27,7 @@ const Step3 = ({navigation, route}) => {
     this.props.dispatch(action)*/
     user.dateN = date
     console.log (user)
-    //navigation.navigate("Step4",{user: user})
+    navigation.navigate("Step4",{user: user})
    }
         return(
             <SleyBackground>

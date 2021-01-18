@@ -9,7 +9,7 @@ class StepsTitle extends React.Component
         return(
           <View style={[styles.title_container,{...this.props.style}]}>
             <CommonText
-                style={{fontSize: 25, textAlign:"center", paddingTop: 20}}>
+                style={{fontSize: 24, textAlign:"center", paddingTop: 20}}>
             {this.props.children}
           </CommonText>
           </View>
