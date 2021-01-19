@@ -8,11 +8,8 @@ import {
   Avatar,
   Title,
   Caption,
-  Paragraph,
   Drawer,
-  Text,
   TouchableRipple,
-  Switch
 } from 'react-native-paper'
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
@@ -97,8 +94,21 @@ export function DrawerContent(props) {
           </Drawer.Section>
         </View>
       </DrawerContentScrollView>
+
       <Drawer.Section style= {styles.bottomDrawerSection}>
+      <DrawerItem
+        icon={({color, size}) => (
+          <Icon
+          name="video-account"
+          color={color}
+          size={size}/>
+        )}
+        label="Visio "
+        onPress= {() => {props.navigation.navigate('Visio')}}
+        />
+
         <DrawerItem
+          style={styles.logoutSection}
         icon={({color, size}) => (
           <Icon
           name="exit-to-app"
@@ -149,10 +159,16 @@ const styles = StyleSheet.create({
       borderTopColor: '#f4f4f4',
       borderTopWidth: 3
     },
+
     bottomDrawerSection: {
-        marginBottom: 15,
+        marginBottom: 40,
         borderTopColor: '#f4f4f4',
         borderTopWidth: 3
+    },
+    logoutSection:{
+      marginBottom: 6,
+      borderTopColor: '#f4f4f4',
+      borderTopWidth: 10
     },
     preference: {
       flexDirection: 'row',

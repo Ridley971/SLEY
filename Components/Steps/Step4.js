@@ -14,7 +14,7 @@ const Step4 =({navigation, route}) => {
   const createTailleAlert =() =>{
     Alert.alert(
       "Taille invalide !",
-      "La taille saisie est incorrect",
+      "La taille saisie est incorrecte",
       [{text:"Compris"}]
     )
 
@@ -46,7 +46,7 @@ const Step4 =({navigation, route}) => {
     }else user.taille = taille
 
     console.log(user.taille)
-    //navigation.navigate("Step5",{user:user})
+    navigation.navigate("Step5",{user:user})
    }
 
     return(
@@ -64,24 +64,19 @@ const Step4 =({navigation, route}) => {
               keyboardType={'numeric'}
               keyboardAppearance='dark'
               maxLength={3}
-              style={{color:'#8A8985', fontSize:100
-              ,
-               fontWeight:'bold'}}
+              style={{color:'#8A8985', fontSize:100,fontWeight:'bold'}}
               />
-              {/* <View style={{ height: 50, width: "60%", borderRadius:15,
-                justifyContent:"center", backgroundColor:'rgba(255, 255, 0, 0.7)' }}> */}
-                 
-                 <Picker
-                    style={{...pickerSelectStyles
+            
+            <Picker
+              style={{...pickerSelectStyles
 
-                    }}
-                    placeholder={{}}
-                    onValueChange={(itemValue) => setMesure(itemValue)}
-                    items={[
-                    {label:"Centimètres", value:"cm"},
-                    {label:"Pieds", value:"pds"},
-                  ]}/>
-              {/* </View> */}
+              }}
+              placeholder={{}}
+              onValueChange={(itemValue) => setMesure(itemValue)}
+              items={[
+              {label:"Centimètres", value:"cm"},
+              {label:"Pieds", value:"pds"},
+            ]}/>
         </View>
         <TouchableOpacity
             style={[styles.touchButton,{backgroundColor: disabled ?"grey":"rgba(255, 255, 0, 0.7)"}]}

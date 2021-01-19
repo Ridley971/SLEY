@@ -1,29 +1,32 @@
 import * as React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-
+import {DrawerContent} from "../Components/CustomComponent/DrawerContent"
 
 import Tutos from '../Components/Training/Tutos'
 import MesVotes from '../Components/Training/MesVotes'
-import MainTabNav from './MaterialBottomTab'
-import Planning from "../Components/Planning"
-import {DrawerContent} from "../Components/CustomComponent/DrawerContent"
+import MainTabNav from './MainTabNav' //import MainTabNav from './MaterialBottomTab'
+import PlanningMyReserv from "../Components/Planning"
+import Visio from '../Components/Visio'
 
 
 const Drawer = createDrawerNavigator();
 
 export default function SleyDrawerNav() {
   return (
-      <Drawer.Navigator
-            drawerContent={props => <DrawerContent{...props}/>}
-            drawerStyle={{
-              backgroundColor: 'rgba(255, 255, 0, 0.9)',
-              width: 230,
-            }}>
-        <Drawer.Screen name="Accueil" component={MainTabNav} />
-        <Drawer.Screen name="Réserver" component={AntrenmanStackNav} />
-        <Drawer.Screen name="Mes Réservations" component={Planning } />
-        <Drawer.Screen name="Mes Votes" component={MesVotes} />
-        <Drawer.Screen name="Tutos" component={Tutos} />
-      </Drawer.Navigator>
+        <Drawer.Navigator
+        drawerContent={props => <DrawerContent{...props}/>}
+        drawerStyle={{
+          backgroundColor: 'rgba(255, 255, 0, 0.9)',
+          width: 240,
+        }}>
+          <Drawer.Screen name="Accueil" component={MainTabNav} />
+
+          
+          <Drawer.Screen name="Tutos" component={Tutos} />
+          <Drawer.Screen name="MyVotes" component={MesVotes} />
+          <Drawer.Screen name="MyReservations" component={PlanningMyReserv } />
+          <Drawer.Screen name="Visio" component={Visio } />
+          {/*<Drawer.Screen name="Reserv" component={ReservStack} />*/}
+      </Drawer.Navigator> 
   );
 }

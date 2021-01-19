@@ -3,16 +3,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import {AuthContext} from "../Components/Auth/AuthProvider"
 import auth from '@react-native-firebase/auth'
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import {DrawerContent} from "../Components/CustomComponent/DrawerContent"
 import ConnexionStackNav from './ConnexionStackNav'
 
-import MainTabNav from './MainTabNav'
-import Tutos from '../Components/Training/Tutos'
-import MesVotes from '../Components/Training/MesVotes'
-import PlanningMyReserv from "../Components/Planning"
-//import ReservStack from './AntrenmanStackNav'
 
-import DatePicker from '../Components/CustomComponent/CustomDatePicker'
+import SleyDrawer from './SleyDrawerNav'
+
 const Drawer = createDrawerNavigator()
 
 const Routes = () =>{
@@ -46,20 +41,7 @@ const Routes = () =>{
            <NavigationContainer>
 
             {user ? 
-              <Drawer.Navigator
-                    drawerContent={props => <DrawerContent{...props}/>}
-                    drawerStyle={{
-                      backgroundColor: 'rgba(255, 255, 0, 0.9)',
-                      width: 240,
-                    }}>
-                  <Drawer.Screen name="Accueil" component={MainTabNav} />
-
-                  
-                  <Drawer.Screen name="Tutos" component={Tutos} />
-                  <Drawer.Screen name="MyVotes" component={MesVotes} />
-                  <Drawer.Screen name="MyReservations" component={PlanningMyReserv } />
-                   //<Drawer.Screen name="Reserv" component={ReservStack} />
-                  </Drawer.Navigator> 
+                  <SleyDrawer/>
                   : 
                   <ConnexionStackNav/>}
           
