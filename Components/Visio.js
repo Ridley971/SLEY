@@ -2,13 +2,15 @@ import React from 'react'
 
 import SecondBackground from './CustomComponent/SecondBackground'
 
-const Visio=()=>{
+class Visio extends React.Component {
 
+render(){
     return(
-
         <SecondBackground title="Visio" isToggleDrawer ={true} {...this.props}>
+        
         </SecondBackground>
     )
+}
   
 }
 

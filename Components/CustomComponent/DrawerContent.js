@@ -95,7 +95,7 @@ export function DrawerContent(props) {
         </View>
       </DrawerContentScrollView>
 
-      <Drawer.Section style= {styles.bottomDrawerSection}>
+      <Drawer.Section style= {styles.bottomDrawerSection} {...props}>
       <DrawerItem
         icon={({color, size}) => (
           <Icon
