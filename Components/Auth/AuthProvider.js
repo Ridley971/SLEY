@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import auth from '@react-native-firebase/auth'
 import { Alert } from 'react-native';
+import firestore from '@react-native-firebase/firestore'
 
 export const AuthContext = React.createContext();
+
 
 const AlertError = (message) =>{
     Alert.alert(
@@ -11,9 +13,18 @@ const AlertError = (message) =>{
     )
 }
 
-export const AuthProvider = ({children}) => {
-    const [user, setUser] = useState(null);
+const createClient = (userObject) =>{
+    console.log("MOn USER : ",userObject)
+    /* firestore().collection("Clients").doc(userObject.uid).onSnapshot(
+        doc => {
+          setUser({ user: {name: doc.data().Nom}})
+        }
+    ) */
+}
 
+export const AuthProvider = ({children}) => {
+
+    const [user, setUser] = useState(null);
     return (
         <AuthContext.Provider
             value={{
@@ -22,6 +33,7 @@ export const AuthProvider = ({children}) => {
                 login: async (email, password) => {
                     try {
                         await auth().signInWithEmailAndPassword(email, password)
+
                     } catch (error) {
 
                         switch (error.code) {
@@ -50,6 +62,8 @@ export const AuthProvider = ({children}) => {
                 register: async (email, password) => {
                     try {
                         await auth().createUserWithEmailAndPassword(email, password)
+                        createClient(user)
+
                     } catch (error) {
                         if(error.code ==='auth/email-alreadey-in-use'){
                             AlertError('Cette adresse email est déjà utilisée')

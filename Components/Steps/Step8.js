@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {
     View,
     Text,
@@ -18,6 +18,8 @@ import { useTheme } from 'react-native-paper';
 
 
 const Step8 = ({navigation}) =>{
+
+  const [disabled, setDisabled] = useState(true)
 
   const [data, setData] = React.useState({
     email: '',
@@ -327,8 +329,9 @@ const Step8 = ({navigation}) =>{
           }
 
           <TouchableOpacity
-          style= {styles.button}
-          onPress={() => register(data.email,data.password)}>
+          style= {[styles.button,{backgroundColor: disabled ?"grey":null}]}
+          onPress={() => register(data.email,data.password)}
+          disabled={disabled}>
               <LinearGradient
                 colors={['black', 'white']}
                 style={styles.signIn}>

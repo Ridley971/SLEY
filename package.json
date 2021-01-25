@@ -28,6 +28,7 @@
     "expo-status-bar": "~1.0.3",
     "expo-updates": "~0.4.0",
     "firebase": "^8.2.3",
+    "firebase-tools": "^9.2.2",
     "moment": "^2.29.1",
     "react": "17.0.1",
     "react-calendars": "^1.0.5",

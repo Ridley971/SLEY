@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {StyleSheet,View, Text, Image, ScrollView,Button, TouchableOpacity} from 'react-native'
 import bodies from "../../Helpers/body-percent"
 import SleyBackground from "../CustomComponent/SleyBackground"
@@ -8,14 +8,22 @@ import StepsTitle from "../CustomComponent/StepsTitle"
 
 const Step6 = ({navigation, route}) => {
   const {user} = route.params
-  const [idTaux, setIdTaux] = useState()
+  const [idTaux, setIdTaux] = useState(0)
+  const [disabled, setDisabled] =useState(true)
    
   const _NextStep = () =>{
     user.txAct= idTaux
+    
     navigation.navigate("Step7", {user:user})
    }
 
-  
+  useEffect(()=>{
+    if(idTaux === 0){
+      setDisabled(true)
+    }else{
+      setDisabled(false)
+    }
+  })
 
     return (
       <SleyBackground>
@@ -25,8 +33,9 @@ const Step6 = ({navigation, route}) => {
         <BodiesList bodies ={bodies}  sexe={user.sexe} setIdTaux= { setIdTaux}/>
 
         <TouchableOpacity
-            style={styles.touchButton}
-            onPress={() => _NextStep()}>
+            style={[styles.touchButton,{backgroundColor: disabled ?"grey":"rgba(255, 255, 0, 0.7)"}]}
+            onPress={() => _NextStep()}
+            disabled={disabled}>
             <Text style={styles.text_Button}>Valider</Text>
         </TouchableOpacity>
 

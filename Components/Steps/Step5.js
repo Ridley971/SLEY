@@ -42,6 +42,7 @@ const Step5 =({navigation, route}) => {
       user.poids=(Math.round(poids*2.205, 2))
 
     }else user.poids = poids
+    
     user.poids= poids
 
     console.log((poids*2.205).toFixed(2))
@@ -87,7 +88,7 @@ const Step5 =({navigation, route}) => {
             ]}/>   
         </View>
         <TouchableOpacity
-            style={styles.touchButton}
+            style={[styles.touchButton,{backgroundColor: disabled ?"grey":"rgba(255, 255, 0, 0.7)"}]}
             onPress={() => _NextStep(poids)}
             disabled= {disabled}>
             <Text style={styles.text_Button}>Valider</Text>

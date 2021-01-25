@@ -1,18 +1,22 @@
 import React from 'react'
 import  {Animated,StyleSheet,View,Image,Text, TouchableOpacity,ScrollView} from 'react-native'
 import CommonText from "./CustomComponent/CommonText"
+import firestore from '@react-native-firebase/firestore'
 
 
 
 import ToggleDrawer from './CustomComponent/ToggleDrawer'
+
 
 class Accueil extends React.Component
 {
   constructor(props) {
     super(props);
     this.state = {
-      hearthSize: new Animated.Value(55)
+      hearthSize: new Animated.Value(55),
+      user :{name:""}
     }
+
   }
 
   componentDidMount() {
@@ -38,9 +42,17 @@ class Accueil extends React.Component
     return Math.round(chargeMAX)
   }
 
+  getClient = async () => {
+    const clientDocument = await firestore().collection("Clients").doc("3AXDWMluUtvqZmX0pAec").get()
+    console.log(clientDocument)
+
+  }
+
+
+
   render()
   {
-
+    {this.getClient()}
     return(
 
      <View style={styles.main_container}>
@@ -65,7 +77,7 @@ class Accueil extends React.Component
                   color:'rgba(255, 255, 0, 1)',
                 marginBottom:30}}>Sport Training</Text>
 
-              <CommonText > Nou kontan vwèw <Text style={{color:"rgba(255, 255, 0, 1)"}}>Le Rid </Text>!</CommonText>
+              <CommonText > Nou kontan vwèw <Text style={{color:"rgba(255, 255, 0, 1)"}}>{this.state.user.name}</Text>!</CommonText>
           </View>
           <ScrollView style={styles.options_container}>
               <TouchableOpacity style={styles.touchOption}>
