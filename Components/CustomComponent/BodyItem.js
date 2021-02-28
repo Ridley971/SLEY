@@ -17,7 +17,7 @@ class BodyItem extends React.Component {
               style={styles.image}
               source={body.image}
             />
-            <Text style={styles.text_body}> {body.title}</Text>
+           <Text style={styles.text_body}> {body.title}</Text>
           </View>
         </TouchableHighlight>
     )
@@ -28,26 +28,28 @@ class BodyItem extends React.Component {
 const styles={
 
   touchOp:{
-      width: 200,
-      height: 400,
     alignItems:'center',
     justifyContent:"center",
     marginBottom:20,
+    borderRadius:20,
+    marginBottom:20,
+    backgroundColor:'rgba(255, 255, 0, 0.1)',
+    
 
   },
   touchOpPress:{
-      width: 200,
-      height: 400,
     alignItems:'center',
     borderWidth:5,
     borderColor:"yellow",
     borderRadius:20,
-    marginBottom:20
+    marginBottom:20,
+    backgroundColor:'rgba(255, 255, 0, 1)'
 
   },
   image:{
-    width: 90,
-    height: 300
+    width: 170,
+    height: 390,
+    resizeMode:'stretch',
   },
 
   text_body:{

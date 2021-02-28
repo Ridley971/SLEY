@@ -1,7 +1,7 @@
 export default data =[
   {
     id:1,
-    title:"moins de 8%",
+    title:"-8%",
     image:require("../assets/Bodies/under8.png"),
     sexe:"M"
   },
@@ -25,13 +25,13 @@ export default data =[
   },
   {
     id:5,
-    title:"au-dessus de 30%",
+    title:">30%",
     image:require("../assets/Bodies/over30.png"),
     sexe:"M"
   },
   {
     id:6,
-    title:"moins de 15%",
+    title:"-15%",
     image:require("../assets/Bodies/under15.png"),
     sexe:"F"
   },
@@ -55,7 +55,7 @@ export default data =[
   },
   {
     id:10,
-    title:"au-dessus de 30%",
+    title:">30%",
     image:require("../assets/Bodies/over30F.png"),
     sexe:"F"
   }

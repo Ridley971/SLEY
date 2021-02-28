@@ -12,11 +12,9 @@ const Step3 = ({navigation, route}) => {
 
     const {user} = route.params
 
-    const today = new Date()
-    const year = moment(today).format("YYYY");
     moment.locale('fr')
 
-    const [date, setDate] = useState()
+    const [date, setDate] = useState(moment().subtract(18,'years'))
     
   
 

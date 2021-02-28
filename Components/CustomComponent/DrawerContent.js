@@ -15,10 +15,14 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import {AuthContext} from '../Auth/AuthProvider'
 
+const getUserName= () =>{
+
+}
 
 export function DrawerContent(props) {
 
   const {user, logout} = useContext(AuthContext)
+  console.log("DRAWCONTENT USER:",user)
   return (
     <View style= {{flex:1}}>
       <DrawerContentScrollView {...props}>
@@ -33,7 +37,7 @@ export function DrawerContent(props) {
                 size= {100}
                 />
               <View>
-                <Title style={styles.title}>{user.email}</Title>
+                <Title style={styles.title}>{user.displayname}</Title>
                 <Caption style={styles.caption}> Caption</Caption>
               </View>
             </View>
@@ -96,16 +100,6 @@ export function DrawerContent(props) {
       </DrawerContentScrollView>
 
       <Drawer.Section style= {styles.bottomDrawerSection} {...props}>
-      <DrawerItem
-        icon={({color, size}) => (
-          <Icon
-          name="video-account"
-          color={color}
-          size={size}/>
-        )}
-        label="Visio "
-        onPress= {() => {props.navigation.navigate('Visio')}}
-        />
 
         <DrawerItem
           style={styles.logoutSection}
@@ -168,7 +162,6 @@ const styles = StyleSheet.create({
     logoutSection:{
       marginBottom: 6,
       borderTopColor: '#f4f4f4',
-      borderTopWidth: 10
     },
     preference: {
       flexDirection: 'row',

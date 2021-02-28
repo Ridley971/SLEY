@@ -30,7 +30,7 @@ const BodiesList = (props)=>{
     return (
        <SafeAreaView  style={{flex:1, alignItems:"center"}}>
         <FlatList
-          style={{flex:1}}
+          style={{flex:1,}}
           data={props.bodies}
           keyExtractor={(item) => item.id.toString()}
           horizontal= {true}

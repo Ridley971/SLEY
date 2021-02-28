@@ -11,6 +11,8 @@ const Step1 = ({navigation}) => {
 
   const user={
     idObj: '',
+    nom:'',
+    prenom:'',
     sexe: '',
     dateN:'',
     taille:'',

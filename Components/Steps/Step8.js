@@ -1,6 +1,7 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import {
     View,
+    ScrollView,
     Text,
     TouchableOpacity,
     TextInput,
@@ -17,9 +18,11 @@ import {AuthContext} from '../Auth/AuthProvider'
 import { useTheme } from 'react-native-paper';
 
 
-const Step8 = ({navigation}) =>{
-
+const Step8 = ({navigation, route}) =>{
+  const {user} = route.params
   const [disabled, setDisabled] = useState(true)
+
+  const {register} = useContext(AuthContext)
 
   const [data, setData] = React.useState({
     email: '',
@@ -28,10 +31,16 @@ const Step8 = ({navigation}) =>{
     check_textInputChange: false,
     secureTextEntry: true,
     confirm_secureTextEntry: true,
-    isValidEmail: true,
+    isValidEmail: null,
+    isSameEmail:null,
     isValidPassword:true,
-    isSamePassword:true,
-    isSameEmail:true,
+    isSamePassword:null,
+  })
+
+  useEffect(()=>{
+    if (data.isValidEmail&& data.isSameEmail && data.isValidPassword && data.isSamePassword) {
+      setDisabled(false)
+    }
   })
 
   const textInputChange = (val) => {
@@ -82,7 +91,8 @@ const Step8 = ({navigation}) =>{
     if (val.length >= 8) {
       setData({
         ... data,
-        isValidPassword: true
+        isValidPassword: true,
+        password:val
       })
     } else {
       setData({
@@ -93,6 +103,8 @@ const Step8 = ({navigation}) =>{
   }
 
   const handleSamePassword =(val) =>{
+    console.log("Data.PAssW: ",data.password)
+    console.log("VAL handleSAME", val)
     if (val === data.password) {
       setData({
         ...data,
@@ -116,7 +128,7 @@ const Step8 = ({navigation}) =>{
         isValidEmail:true,
 
         email: val,
-        check_textInputChange: true
+        //check_textInputChange: true
       })
 
     } else {
@@ -141,7 +153,6 @@ const Step8 = ({navigation}) =>{
     }
   }
 
-  const {register} = useContext(AuthContext)
 
   return(
     <View style={styles.container}>
@@ -149,7 +160,7 @@ const Step8 = ({navigation}) =>{
           <Text style={styles.text_header}>S'inscrire !</Text>
         </View>
 
-        <View style={styles.footer}>
+        <ScrollView style={styles.footer}>
           <Text style={styles.text_footer}>Email</Text>
           <View style={styles.action}>
               <FontAwesome
@@ -164,7 +175,7 @@ const Step8 = ({navigation}) =>{
                   //onChangeText={(val) => textInputChange(val)}
                   onEndEditing={(e) => handleValidEmail(e.nativeEvent.text)}
                 />
-                {data.check_textInputChange ?
+                {data.isValidEmail ?
                <Animatable.View
                    animation="bounceIn"
                >
@@ -176,10 +187,12 @@ const Step8 = ({navigation}) =>{
                </Animatable.View>
                : null}
           </View>
-          {data.isValidEmail ? null:
+          {
+            data.isValidEmail===false?
             <Animatable.View animation="fadeInLeft" duration={500}>
               <Text style={styles.errorMsg}> L'adresse mail est invalide</Text>
-            </Animatable.View>
+            </Animatable.View>:null
+
           }
 
           <Text style={[styles.text_footer,{marginTop:30}]}>Confirmez votre Email</Text>
@@ -196,7 +209,7 @@ const Step8 = ({navigation}) =>{
                   //onChangeText={(val) => textInputChange(val)}
                   onEndEditing ={(e) => handleSameEmail(e.nativeEvent.text)}
                 />
-                {data.check_textInputChange ?
+                {data.isSameEmail ?
                <Animatable.View
                    animation="bounceIn"
                >
@@ -208,13 +221,13 @@ const Step8 = ({navigation}) =>{
                </Animatable.View>
                : null}
           </View>
-          {data.isSameEmail ? null:
+          {data.isSameEmail===false ? 
             <Animatable.View animation="fadeInLeft" duration={500}>
               <Text style={styles.errorMsg}>Les emails ne correspondent pas</Text>
-            </Animatable.View>
+            </Animatable.View>:null
           }
 
-          <Text style={[styles.text_footer,{marginTop:30}]}>Pseudo ou Identifiant</Text>
+          <Text style={[styles.text_footer,{marginTop:30}]}>Nom</Text>
           <View style={styles.action}>
               <FontAwesome
                 name="id-card"
@@ -222,29 +235,24 @@ const Step8 = ({navigation}) =>{
                 size={20}
                 />
                 <TextInput
-                  placeholder="Votre Pseudo ou Identifiant"
+                  placeholder="Votre nom de Famille"
                   style= {styles.textInput}
-                  autoCapitalize="none"
-                  //onChangeText={(val) => textInputChange(val)}
+                  onEndEditing={(e)=> {user.nom= e.nativeEvent.text.toUpperCase()}}
                 />
-                {data.check_textInputChange ?
-               <Animatable.View
-                   animation="bounceIn"
-               >
-                   <Feather
-                       name="check-circle"
-                       color="green"
-                       size={30}
-                   />
-               </Animatable.View>
-               : null}
           </View>
-
-          {data.isSamePassword ? null:
-            <Animatable.View animation="fadeInLeft" duration={500}>
-              <Text style={styles.errorMsg}>Ce pseudo n'est pas valide </Text>
-            </Animatable.View>
-          }
+          <Text style={[styles.text_footer,{marginTop:30}]}>Prénom</Text>
+          <View style={styles.action}>
+              <FontAwesome
+                name="id-card"
+                color="black"
+                size={20}
+                />
+                <TextInput
+                  placeholder="Votre Prénom"
+                  style= {styles.textInput}
+                  onEndEditing ={(e)=>{user.prenom=e.nativeEvent.text.toUpperCase()}}
+                />
+          </View>
 
           <Text style={[styles.text_footer,{marginTop:30}]}>Mot de Passe</Text>
           <View style={styles.action}>
@@ -258,7 +266,7 @@ const Step8 = ({navigation}) =>{
                   secureTextEntry={data.secureTextEntry}
                   style= {styles.textInput}
                   autoCapitalize="none"
-                  onChangeText={(val) => handlePasswordChange(val)}
+                  //onChangeText={(val) => handlePasswordChange(val)}
                   onEndEditing={(e) => handleValidPassword(e.nativeEvent.text)}
                 />
                 <TouchableOpacity onPress= {updateSecureTextEntry}>
@@ -299,7 +307,7 @@ const Step8 = ({navigation}) =>{
                   secureTextEntry={data.confirm_secureTextEntry}
                   style= {styles.textInput}
                   autoCapitalize="none"
-                  onChangeText={(val) => handleConfirmPasswordChange(val)}
+                  //onChangeText={(val) => handleConfirmPasswordChange(val)}
                   onEndEditing={(e) => handleSamePassword(e.nativeEvent.text)}
                 />
                 <TouchableOpacity onPress= {updateConfirmSecureTextEntry}>
@@ -322,15 +330,15 @@ const Step8 = ({navigation}) =>{
 
           </View>
 
-          {data.isSamePassword ? null:
+          {data.isSamePassword ===false? 
             <Animatable.View animation="fadeInLeft" duration={500}>
               <Text style={styles.errorMsg}>Les mots de passes ne correspondent pas </Text>
-            </Animatable.View>
+            </Animatable.View>:null
           }
 
           <TouchableOpacity
-          style= {[styles.button,{backgroundColor: disabled ?"grey":null}]}
-          onPress={() => register(data.email,data.password)}
+          style= {[styles.button]}
+          onPress={() => register(data.email,data.password, user)}
           disabled={disabled}>
               <LinearGradient
                 colors={['black', 'white']}
@@ -340,7 +348,7 @@ const Step8 = ({navigation}) =>{
                 </Text>
               </LinearGradient>
           </TouchableOpacity>
-        </View>
+        </ScrollView>
     </View>
     );
 };

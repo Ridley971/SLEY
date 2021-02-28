@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useReducer, useState} from 'react';
 import auth from '@react-native-firebase/auth'
 import { Alert } from 'react-native';
 import firestore from '@react-native-firebase/firestore'
@@ -13,13 +13,25 @@ const AlertError = (message) =>{
     )
 }
 
-const createClient = (userObject) =>{
-    console.log("MOn USER : ",userObject)
-    /* firestore().collection("Clients").doc(userObject.uid).onSnapshot(
-        doc => {
-          setUser({ user: {name: doc.data().Nom}})
-        }
-    ) */
+const createClient = (userConnected, data) =>{
+    
+    firestore().collection("Clients")
+        .doc(userConnected.uid)
+        .set({
+            Nom : data.nom,
+            Prenom: data.prenom,
+            DateN : data.dateN,
+            Sexe : data.sexe,
+            Taille : data.taille,
+            TxBase : data.txAct,
+            TxCible : data.txCible,
+            PoidsAct : data.poids,
+            PoidsInitial : data.poids,
+            Objectif:  data.idObj
+            }).then(()=>{console.log("Client ajouté !")})
+            .catch((err)=> console.log("Une erreur s'est produite lors de l'ajout du client: ",err))
+        
+     
 }
 
 export const AuthProvider = ({children}) => {
@@ -59,10 +71,10 @@ export const AuthProvider = ({children}) => {
                     }
                 },
 
-                register: async (email, password) => {
+                register: async (email, password, data) => {
                     try {
                         await auth().createUserWithEmailAndPassword(email, password)
-                        createClient(user)
+                        createClient(auth().currentUser, data)
 
                     } catch (error) {
                         if(error.code ==='auth/email-alreadey-in-use'){
